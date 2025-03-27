@@ -1,0 +1,249 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+    color: #fff;
+    text-align: center;
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #18a2e7; 
+    text-shadow: 2px 2px 10px #00c6ff, -2px -2px 10px #0072ff;
+    transform: scale(1.1);
+}
+
+header h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00a8ff;
+}
+
+header {
+    background: rgba(7, 7, 7, 0.8);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+
+/* HERO SECTION OVERLAY */
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    color: white;
+    max-width: 1000px;
+}
+
+.gallery {
+    min-height: 60vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.gallery h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding: 15px 30px; 
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 168, 255, 0.5);
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 168, 255, 0.7);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-wrapper:hover .image-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        min-height: auto; 
+        padding: 30px 0;
+    }
+    
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-container {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    padding: 40px 20px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background: rgba(7, 7, 7, 0.8); 
+    color: white;
+    text-align: center;
+    padding: 20px 0; 
+    font-size: 16px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #00a8ff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #4facfe;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid #00a8ff;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+button {
+    background: linear-gradient(90deg, #00a8ff, #007bff);
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 168, 255, 0.5);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #007bff, #00a8ff);
+    box-shadow: 0 6px 15px rgba(0, 168, 255, 0.7);
+}
+
+
+.social-media p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact {
+    min-height: 55vh; 
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+
+.contact h2 {
+    font-size: 32px;
+    padding: 20px 30px; 
+    font-weight: bold;
+}
